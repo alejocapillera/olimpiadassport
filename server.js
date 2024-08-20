@@ -187,7 +187,7 @@ app.post("/api/auth/venta", async (req, res) => {
   try {
     // Insertar en la tabla pedidos
     const [resultPedido] = await sequelize.query(
-      "INSERT INTO pedidos (id_cliente, fecha_pedido, total, id_estado) VALUES (?, NOW(), ?, ?)",
+      "INSERT INTO pedidos (id_cliente, fecha_pedido, id_estado, total) VALUES (?, NOW(), ?, ?)",
       {
         replacements: [id_cliente, total, 1], // 1 es el id_estado para 'pendiente'
         transaction,

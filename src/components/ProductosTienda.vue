@@ -223,7 +223,7 @@ export default {
 
       try {
         const response = await axios.delete(
-          `http://localhost:3306/api/auth/carrito/${producto.id_carrito_producto}`,
+          `http://localhost:3106/api/auth/carrito/${producto.id_carrito_producto}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -267,7 +267,7 @@ export default {
 
       try {
         const response = await axios.post(
-          "http://localhost:3306/api/auth/venta",
+          "http://localhost:3106/api/auth/venta",
           {
             id_cliente,
             productos: this.carrito,
